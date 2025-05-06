@@ -1,0 +1,123 @@
+/* General navbar styling */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 15px 20px;
+  z-index: 100;
+  box-shadow: 0 0 1px 0 #d0d0d0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #c0c0c0;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.resume-button {
+  border: 1px solid #a0a0a0; /* More subtle gray border */
+  padding: 9px 14px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger icon styling */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  width: 30px;
+  height: 30px;
+  filter: invert(100%) brightness(100%) sepia(0) saturate(100%);
+}
+
+/* Dark mode styles */
+.dark .navbar-container {
+  background-color: #111111;
+}
+
+.dark .nav-links a {
+  color: #d0d0d0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 786px) {
+  .nav-links {
+    display: none;
+    width: 100%;
+    background-color: #1e1e1e;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    transform: translateY(-100%);
+  }
+
+  .nav-links.active {
+    display: flex;
+    transform: translateY(0); /* Slide down menu */
+  }
+
+  .navbar-actions {
+    margin-left: 15px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .resume-button {
+    display: block; /* Make resume button visible */
+    background-color: transparent;
+    color: white; /* White text color */
+  }
+}

@@ -1,0 +1,56 @@
+/* src/styles/Hero.css */
+
+/* General Hero Section Styling */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* Full height of the screen */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.hero-container {
+  max-width: 1000px;  /* Max width for better control */
+  width: 100%;
+}
+
+/* Styling for the text (Name, Profession, and Description) */
+.hero-text h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.hero-text h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #c0c0c0; /* Slightly lighter color for the profession */
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #c0c0c0;
+  line-height: 1.6; /* Better line spacing for readability */
+  margin-top: 20px;
+}
+
+/* Styling for responsiveness */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 3rem; /* Reduce font size for smaller screens */
+  }
+
+  .hero-text h3 {
+    font-size: 1.5rem; /* Slightly smaller profession font size */
+  }
+
+  .hero-text p {
+    font-size: 1rem;  /* Smaller paragraph text for mobile */
+    margin-top: 15px;
+  }
+}
