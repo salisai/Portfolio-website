@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "../styles/Navbar.css"
-import { download_icon, menu_icon } from '../assets/assets'
+import { menu_icon } from '../assets/assets'
 
 const Navbar = () => {
 
