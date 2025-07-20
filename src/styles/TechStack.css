@@ -2,89 +2,156 @@
 
 /* General Tech Stack Section Styling */
 .tech-stack-section {
-    color: white;
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .tech-stack-container {
-    max-width: 1200px;
-    margin: 0 auto;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.tech-stack-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tech-stack-container h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #ffffff, #a7a9be);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Tech Stack Grid Layout */
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Enhanced Tech Stack Block Styling */
+.tech-stack-block {
+  background: radial-gradient(ellipse at top, rgba(56, 58, 89, 0.3), transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 8px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 0 12px rgba(255, 255, 255, 0.02);
+  color: #e0e0e0;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle gradient overlay */
+.tech-stack-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.tech-stack-block h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline effect for title */
+.tech-stack-block h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: rgba(90, 101, 230, 0.6);
+  transition: width 0.3s ease;
+}
+
+/* Enhanced Tech Tags */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.tech-tag {
+  background: rgba(90, 101, 230, 0.1);
+  border: 1px solid rgba(90, 101, 230, 0.3);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: 'SF Mono', 'Roboto Mono', monospace;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+/* Optional: Add icons before tech tags */
+.tech-tag::before {
+  content: '•';
+  margin-right: 8px;
+  color: rgba(90, 101, 230, 0.8);
+}
+
+/* Hover Effects */
+.tech-stack-block:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    inset 0 0 16px rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.tech-stack-block:hover h3::after {
+  width: 80px;
+}
+
+.tech-tag:hover {
+  background: rgba(90, 101, 230, 0.2);
+  border-color: rgba(90, 101, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .tech-stack-section {
+    padding: 60px 20px;
   }
   
   .tech-stack-container h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 40px;
+    font-size: 2.5rem;
   }
-  
-  /* Tech Stack Grid Layout - Two blocks per row */
+
   .tech-stack-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two blocks per row */
-    gap: 30px;  /* Space between the blocks */
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
-  
-  /* Tech Stack Block Styling */
+
   .tech-stack-block {
-    background-color: #2c2c2c;  /* Dark background for each block */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    color: #c0c0c0;
+    padding: 25px;
   }
-  
+
   .tech-stack-block h3 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: white;
+    font-size: 1.6rem;
   }
-  
-  /* Styling for technology tags inside each block */
-  .tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center; /* Center tags */
-  }
-  
+
   .tech-tag {
-    background-color: #747bff;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
+    padding: 6px 12px;
+    font-size: 0.8rem;
   }
-  
-  .tech-tag:hover {
-    background-color: #5a65e6;  /* Darker blue on hover */
-  }
-  
-  /* Mobile responsiveness */
-  @media (max-width: 768px) {
-    .tech-stack-container h2 {
-      font-size: 2.5rem;  /* Smaller title on mobile */
-    }
-  
-    /* Adjust the grid to one block per row on smaller screens */
-    .tech-stack-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .tech-stack-block {
-      padding: 15px;
-    }
-  
-    .tech-stack-block h3 {
-      font-size: 1.8rem;  /* Smaller category title */
-    }
-  
-    .tech-tag {
-      font-size: 0.9rem;  /* Smaller font size for tags on mobile */
-    }
-  }
-  
+}

@@ -14,19 +14,29 @@
   
   .contact-form-container h2 {
     font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 40px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #ffffff, #a7a9be);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   }
   
   /* Form Styling */
   .contact-form {
+    background: radial-gradient(ellipse at bottom, rgba(56, 58, 89, 0.3), transparent);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     display: flex;
     flex-direction: column;
-    background-color: #1e1e1e;
     gap: 20px;
-    border: 1px solid rgba(180, 180, 180, 0.3)  ;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     padding: 30px;
-    border-radius: 5px;
+    border-radius: 8px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-align: left;
+    position: relative;
+    overflow: hidden;
   }
   
   .form-group {

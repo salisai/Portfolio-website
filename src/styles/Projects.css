@@ -16,6 +16,10 @@
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 40px;
+    background: linear-gradient(90deg, #ffffff, #a7a9be);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
   
   /* Projects Grid */
@@ -26,15 +30,22 @@
   }
   
   /* Project Card Styling */
-  .project-card {
-    background-color: #2c2c2c; /* Dark card background */
-    padding: 20px;
+.project-card {
+    background: radial-gradient(ellipse at bottom, rgba(56, 58, 89, 0.3), transparent);
+    backdrop-filter: blur(16px);
+   -webkit-backdrop-filter: blur(16px);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 12px rgba(255, 255, 255, 0.02);
     text-align: left;
-    color: #c0c0c0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+    color: #e0e0e0;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    transform: scale(1);
+}
   
   .project-card h3 {
     font-size: 1.5rem;
@@ -56,46 +67,67 @@
     margin-bottom: 15px;
   }
   
-  .project-card:hover {
-    transform: translateY(-5px); /* Slight elevation on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  /* Stronger shadow on hover */
-  }
+ .project-card:hover {
+  transform: translateY(-6px);
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
   
   /* Technologies Tags */
   .technologies {
     display: flex;
     justify-content: flex-start;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
   }
   
-  .tech-tag {
-    background-color: #747bff;
-    color: white;
-    padding: 5px 10px;
-    margin-right: 10px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
-  }
+/* Update the technologies tags section */
+.tag {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  text-transform: lowercase;
+  font-family: 'SF Mono', 'Roboto Mono', monospace;
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
   
-  .tech-tag:hover {
-    background-color: #5a65e6; /* Darker blue on hover */
-  }
-  
+ 
   /* View Source Button */
-  .view-source-btn {
-    display: inline-block;
-    margin-top: 15px;
-    color: #747bff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
+.view-source-btn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
   
-  .view-source-btn:hover {
+.view-source-btn:hover {
     color: #5a65e6;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
   }
-  
+
   /* Mobile responsiveness */
   @media (max-width: 768px) {
     .projects-container h2 {

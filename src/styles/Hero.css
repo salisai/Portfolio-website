@@ -39,6 +39,57 @@
   margin-top: 20px;
 }
 
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.hero-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  justify-content: center;
+}
+/* Icon spacing */
+.btn-icon {
+  font-size: 1.1rem;
+}
+
+/* Solid button */
+.hero-button.solid {
+  background-color: #111;
+  color: white;
+  border: 2px solid #111;
+}
+
+.hero-button.solid:hover {
+  background-color: #000;
+  border-color: #000;
+}
+
+/* Outline button */
+.hero-button.outline {
+  background-color: transparent;
+  border: 2px solid #ccc;
+  color: #ffffff;
+}
+
+.hero-button.outline:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+
 /* Styling for responsiveness */
 @media (max-width: 768px) {
   .hero-text h1 {
