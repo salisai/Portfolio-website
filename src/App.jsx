@@ -8,6 +8,7 @@ import ContactForm from './components/Contact'
 import Footer from './components/Footer'
 import './index.css';
 import ScrollProgress from './components/ScrollProgress'
+import Certification from "./components/Certifications"
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <AboutMe/>
       <Projects/>
       <TechStack/>
+      <Certification/>
       <ContactForm/>
       <Footer/>
     </>

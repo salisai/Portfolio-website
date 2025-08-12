@@ -1,0 +1,86 @@
+.certifications-section {
+  color: white;
+  padding: 60px 20px;
+}
+
+.certifications-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.certifications-container h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #ffffff, #a7a9be);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.certifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cert-card {
+  background: radial-gradient(ellipse at top, rgba(56, 58, 89, 0.3), transparent);
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+border: 1px solid rgba(255, 255, 255, 0.08);
+box-shadow:
+  0 8px 32px rgba(0, 0, 0, 0.3),
+  inset 0 0 12px rgba(255, 255, 255, 0.02);
+  padding: 16px 20px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.25s ease;
+}
+
+.cert-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cert-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.cert-date {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.issuer {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(200, 200, 255, 0.85);
+  margin-top: 6px;
+}
+
+.description {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+/* For larger screens, make it stretched and centered */
+@media (min-width: 1024px) {
+  .cert-card {
+    padding: 20px 24px;
+  }
+  .cert-card h3 {
+    font-size: 1.15rem;
+  }
+}
