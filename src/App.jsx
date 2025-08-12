@@ -7,10 +7,12 @@ import TechStack from './components/TechStack'
 import ContactForm from './components/Contact'
 import Footer from './components/Footer'
 import './index.css';
+import ScrollProgress from './components/ScrollProgress'
 
 const App = () => {
   return (
     <>
+      <ScrollProgress/>
       <Navbar/>
       <Hero/>
       <AboutMe/>

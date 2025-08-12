@@ -1,6 +1,66 @@
-// src/components/TechStack.js
 import React from 'react';
-import '../styles/TechStack.css'; // Add your custom CSS for the Tech Stack section here
+import '../styles/TechStack.css';
+import { motion } from 'framer-motion';
+
+// Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10
+    }
+  }
+};
+
+const techTagVariants = {
+  hidden: { scale: 0.8, opacity: 0 },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 150
+    }
+  },
+  hover: {
+    scale: 1.1,
+    y: -3,
+    transition: {
+      type: "spring",
+      stiffness: 400
+    }
+  }
+};
+
+const blockVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10,
+      staggerChildren: 0.05,
+      delayChildren: 0.2
+    }
+  }
+};
 
 const TechStack = () => {
   const techStack = {
@@ -11,48 +71,97 @@ const TechStack = () => {
   };
 
   return (
-    <section className="tech-stack-section">
+    <motion.section 
+      className="tech-stack-section"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-50px" }}
+      variants={containerVariants}
+    >
       <div className="tech-stack-container">
-        <h2>Tech Stack</h2>
+        <motion.h2 variants={itemVariants}>Tech Stack</motion.h2>
+        
         <div className="tech-stack-grid">
-          <div className="tech-stack-block">
-            <h3>Frontend</h3>
+          <motion.div 
+            className="tech-stack-block"
+            variants={blockVariants}
+          >
+            <motion.h3 variants={itemVariants}>Frontend</motion.h3>
             <div className="tech-tags">
               {techStack.frontend.map((tech, index) => (
-                <span key={index} className="tech-tag">{tech}</span>
+                <motion.span 
+                  key={index} 
+                  className="tech-tag"
+                  variants={techTagVariants}
+                  whileHover="hover"
+                >
+                  {tech}
+                </motion.span>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          <div className="tech-stack-block">
-            <h3>DevOps</h3>
+          <motion.div 
+            className="tech-stack-block"
+            variants={blockVariants}
+          >
+            <motion.h3 variants={itemVariants}>DevOps</motion.h3>
             <div className="tech-tags">
               {techStack.devOps.map((tech, index) => (
-                <span key={index} className="tech-tag">{tech}</span>
+                <motion.span 
+                  key={index} 
+                  className="tech-tag"
+                  variants={techTagVariants}
+                  whileHover="hover"
+                >
+                  {tech}
+                </motion.span>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          <div className="tech-stack-block">
-            <h3>Backend</h3>
+          <motion.div 
+            className="tech-stack-block"
+            variants={blockVariants}
+          >
+            <motion.h3 variants={itemVariants}>Backend</motion.h3>
             <div className="tech-tags">
               {techStack.backend.map((tech, index) => (
-                <span key={index} className="tech-tag">{tech}</span>
+                <motion.span 
+                  key={index} 
+                  className="tech-tag"
+                  variants={techTagVariants}
+                  whileHover="hover"
+                >
+                  {tech}
+                </motion.span>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          <div className="tech-stack-block">
-            <h3>Tools</h3>
+          <motion.div 
+            className="tech-stack-block"
+            variants={blockVariants}
+          >
+            
+            <motion.h3 variants={itemVariants}>Tools</motion.h3>
             <div className="tech-tags">
               {techStack.tools.map((tech, index) => (
-                <span key={index} className="tech-tag">{tech}</span>
+                <motion.span 
+                  key={index} 
+                  className="tech-tag"
+                  variants={techTagVariants}
+                  whileHover="hover"
+                >
+                  {tech}
+                </motion.span>
               ))}
             </div>
-          </div>
+          </motion.div>
+          
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
